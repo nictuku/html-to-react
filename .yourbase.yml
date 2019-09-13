@@ -1,0 +1,15 @@
+dependencies:
+  build:
+    - node:10.15.1
+
+build_targets:
+  - name: default
+    environment:
+      - NODE_ENV=development
+    commands:
+      - npm run test-coverage
+
+ci:
+  builds:
+    - name: default
+      build_target: default
